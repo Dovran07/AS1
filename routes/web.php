@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::controller(Controller::class)
+    ->group(function () {
+        Route::get('', 'index');
+        Route::get('AS1/{id}', 'show')->where('id', '[0-9]+');
+    });

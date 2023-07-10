@@ -17,19 +17,11 @@ class RegistrationFactory extends Factory
      */
     public function definition(): array
     {
-        $course = DB::table('courses')->inRandomOrder()->first();
-        $classroom = DB::table('classrooms')->inRandomOrder()->first();
-        $teacher = DB::table('teachers')->inRandomOrder()->first();
-        $season = DB::table('seasons')->inRandomOrder()->first();
+        $student = DB::table('students')->inRandomOrder()->first();
         $lesson = DB::table('lessons')->inRandomOrder()->first();
-        $registration = DB::table('registrations')->inRandomOrder()->first();
         return [
-            'course_id' => $course->id,
-            'classroom_id' => $classroom->id,
-            'teacher_id' => $teacher->id,
-            'season' =>$season->id,
+            'student_id' => $student->id,
             'lesson' =>$lesson->id,
-            'registrations' =>$registration->id,
             'price' => rand(1200, 2000),
         ];
     }

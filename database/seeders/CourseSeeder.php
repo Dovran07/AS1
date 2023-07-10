@@ -16,7 +16,7 @@ class CourseSeeder extends Seeder
         $courses = [
             'English',
             'Russian',
-            'Deutch',
+            'Dutch',
             'Math',
             'Physics',
             'Chemistry',

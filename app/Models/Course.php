@@ -12,6 +12,9 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 
+/**
+ * @property mixed name
+ */
 class Course extends Model
 {
     protected $guarded = [

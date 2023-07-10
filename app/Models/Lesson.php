@@ -20,6 +20,10 @@ class Lesson extends Model
 
     public $timestamps = false;
 
+    public static function factory($int)
+    {
+    }
+
 
     public function students(): HasMany
     {

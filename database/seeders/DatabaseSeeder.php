@@ -17,10 +17,6 @@ class DatabaseSeeder extends Seeder
             CourseSeeder::class,
             SeasonSeeder::class,
         ]);
-        \App\Models\Student::factory(1000)->create();
-        \App\Models\Teacher::factory(20)->create();
-        \App\Models\Lesson::factory(100)->create();
-        \App\Models\Registration::factory(1000)->create();
-        \App\Models\Registration::factory(1000)->create();
+
     }
 }
