@@ -14,14 +14,8 @@ class SeasonSeeder extends Seeder
     public function run(): void
     {
         $seasons = [
-            'Toyota',
-            'Audi',
-            'Hyundai',
-            'BMW',
-            'Nissan',
-            'Lada',
-            'Mercedes-Benz',
-            'Lexus',
+            'Summer',
+            'Autumn',
         ];
 
         foreach ($seasons as $season) {

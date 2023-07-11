@@ -2,10 +2,11 @@
 
 namespace Database\Factories;
 
-
-use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Student>
+ */
 class StudentFactory extends Factory
 {
     /**
@@ -15,11 +16,13 @@ class StudentFactory extends Factory
      */
     public function definition(): array
     {
+        $gender = fake()->boolean();
+
         return [
             'name' => fake()->name(),
             'surname' => fake()->lastName(),
-            'gender' => fake()->boolean(),
-            'date_of_birth' => fake()->date(),
+            'date_of_birth'=> fake()->date(),
+            'gender'=> $gender,
         ];
     }
 }

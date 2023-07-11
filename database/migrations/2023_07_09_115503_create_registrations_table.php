@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('registrations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('price')->default(0);
+            $table->unsignedBigInteger('lesson_id')->nullable();
+            $table->foreign('lesson_id')->references('id')->on('lessons')->cascadeOnDelete();
+            $table->unsignedBigInteger('student_id')->nullable();
+            $table->foreign('student_id')->references('id')->on('students')->cascadeOnDelete();
             $table->timestamps();
         });
     }

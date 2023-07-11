@@ -13,6 +13,14 @@ return new class extends Migration
     {
         Schema::create('lessons', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('season_id')->nullable();
+            $table->foreign('season_id')->references('id')->on('seasons')->cascadeOnDelete();
+            $table->unsignedBigInteger('teacher_id')->nullable();
+            $table->foreign('teacher_id')->references('id')->on('teachers')->cascadeOnDelete();
+            $table->unsignedBigInteger('classroom_id')->nullable();
+            $table->foreign('classroom_id')->references('id')->on('classrooms')->cascadeOnDelete();
+            $table->unsignedBigInteger('course_id')->nullable();
+            $table->foreign('course_id')->references('id')->on('courses')->cascadeOnDelete();
             $table->timestamps();
         });
     }
